@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe2e69ed947dae48adafb4c1dde5fc4, type: 3}
+  m_Name: MadScientist
+  m_EditorClassIdentifier: 
+  objectives:
+  - {fileID: 11400000, guid: 975972ba16030714f8c3f1ccf88d540e, type: 2}
+  - {fileID: 11400000, guid: ea59339075b74fd4caaff618f780e2df, type: 2}
+  questName: Mad Scientist

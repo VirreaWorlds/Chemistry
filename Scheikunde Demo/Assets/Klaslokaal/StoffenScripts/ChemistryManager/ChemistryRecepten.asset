@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa5744197e1db4a459d448463d874c03, type: 3}
+  m_Name: ChemistryRecepten
+  m_EditorClassIdentifier: 
+  recepten:
+  - IngredientA: {fileID: 0}
+    IngredientB: {fileID: 11400000, guid: bff7f9e26c4fafa4db76b563acf44fd3, type: 2}
+    Result: {fileID: 11400000, guid: bff7f9e26c4fafa4db76b563acf44fd3, type: 2}
+  - IngredientA: {fileID: 11400000, guid: bff7f9e26c4fafa4db76b563acf44fd3, type: 2}
+    IngredientB: {fileID: 11400000, guid: 927871e7b1eca6b40b6616d55bb5167d, type: 2}
+    Result: {fileID: 11400000, guid: db8ea6cbcd4d48e429b97269cc38bfbe, type: 2}
+  - IngredientA: {fileID: 11400000, guid: bff7f9e26c4fafa4db76b563acf44fd3, type: 2}
+    IngredientB: {fileID: 11400000, guid: 45de1e526483ea1429c5f280cd4ba597, type: 2}
+    Result: {fileID: 11400000, guid: 925f0878ae55f0840a2416f38dad9f28, type: 2}
+  - IngredientA: {fileID: 11400000, guid: bff7f9e26c4fafa4db76b563acf44fd3, type: 2}
+    IngredientB: {fileID: 11400000, guid: 79b58b75b6304b8498179227645b7494, type: 2}
+    Result: {fileID: 11400000, guid: 8e18ef4713b5bd041a2b2471c260d7aa, type: 2}
+  - IngredientA: {fileID: 11400000, guid: df458aeebcfb2254db31edc897be8822, type: 2}
+    IngredientB: {fileID: 11400000, guid: 907826d1572490049ab21e8cc343d19c, type: 2}
+    Result: {fileID: 11400000, guid: 833b3f2771e5a2c46bb8bfa55751290b, type: 2}
+  - IngredientA: {fileID: 0}
+    IngredientB: {fileID: 11400000, guid: df458aeebcfb2254db31edc897be8822, type: 2}
+    Result: {fileID: 11400000, guid: df458aeebcfb2254db31edc897be8822, type: 2}
+  - IngredientA: {fileID: 11400000, guid: bff7f9e26c4fafa4db76b563acf44fd3, type: 2}
+    IngredientB: {fileID: 11400000, guid: df458aeebcfb2254db31edc897be8822, type: 2}
+    Result: {fileID: 11400000, guid: df458aeebcfb2254db31edc897be8822, type: 2}
+  - IngredientA: {fileID: 11400000, guid: df458aeebcfb2254db31edc897be8822, type: 2}
+    IngredientB: {fileID: 11400000, guid: fe9e372cfbd811f46ac82285400cc157, type: 2}
+    Result: {fileID: 11400000, guid: 3626207fbe27ae9449607cc74f20332e, type: 2}
+  - IngredientA: {fileID: 11400000, guid: bff7f9e26c4fafa4db76b563acf44fd3, type: 2}
+    IngredientB: {fileID: 11400000, guid: fe9e372cfbd811f46ac82285400cc157, type: 2}
+    Result: {fileID: 11400000, guid: 2120ca2d999a6db4ea66e3ab573208ca, type: 2}
