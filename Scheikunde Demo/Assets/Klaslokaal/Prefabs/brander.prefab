@@ -803,6 +803,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8552042838890838170}
+  - component: {fileID: 8225769664111147705}
   - component: {fileID: 4508887718348560972}
   - component: {fileID: 4684075888215455551}
   - component: {fileID: 7414571479814964213}
@@ -838,6 +839,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8225769664111147705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9071697749936874016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79b31b396a25f34dbbf780fd67587b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 0, z: 0, w: 0}
+  timeBeforeRespawn: 10
+  t: 0
 --- !u!114 &4508887718348560972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5877,6 +5894,7 @@ MonoBehaviour:
   flameMan: {fileID: 4931147265483516709}
   burnerAudio: {fileID: 8679351247716155499}
   toggleAudio: {fileID: 5380809407188233064}
+  isAnimatedBurner: 0
 --- !u!1001 &1035548381861855485
 PrefabInstance:
   m_ObjectHideFlags: 0

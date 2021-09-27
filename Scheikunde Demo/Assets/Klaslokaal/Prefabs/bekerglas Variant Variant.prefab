@@ -207,6 +207,7 @@ MonoBehaviour:
   - {fileID: 62286393460892246}
   - {fileID: 9005513894373003255}
   fluidPlane: {fileID: 4749196205544305487}
+  fluidPlaneVisible: 1
   level: 0
   inwater: 0
 --- !u!114 &1304513519680485592
@@ -240,6 +241,7 @@ MonoBehaviour:
   respawnAnchor: {fileID: 0}
   respawnPos: {x: 0, y: 0, z: 0}
   acceptingInput: 0
+  isUsedInAnimation: 0
 --- !u!114 &6569619879155140068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12258,6 +12260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7651904614030498083}
+  - component: {fileID: 913947351566250997}
   - component: {fileID: 567138976584977817}
   - component: {fileID: 6746072426464597638}
   - component: {fileID: 8825413049615262284}
@@ -12287,6 +12290,22 @@ Transform:
   m_Father: {fileID: -2180665742282426129}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &913947351566250997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7024161971377636249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79b31b396a25f34dbbf780fd67587b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 0, z: 0, w: 0}
+  timeBeforeRespawn: 10
+  t: 0
 --- !u!114 &567138976584977817
 MonoBehaviour:
   m_ObjectHideFlags: 0

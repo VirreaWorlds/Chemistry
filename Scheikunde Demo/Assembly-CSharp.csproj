@@ -204,6 +204,7 @@
     <Compile Include="Assets\BNG Framework\Scripts\Components\Damageable.cs" />
     <Compile Include="Assets\BNG Framework\Scripts\Helpers\ScaleMaterialHelper.cs" />
     <Compile Include="Assets\BNG Framework\Scripts\Extras\ProjectileLauncher.cs" />
+    <Compile Include="Assets\MiscScripts\ObjectRespawn.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\BNG Framework\Integrations\PUN\Readme.txt" />
