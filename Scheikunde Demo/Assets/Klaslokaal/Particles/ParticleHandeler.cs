@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class ParticleHandeler : MonoBehaviour
 {
@@ -148,6 +149,7 @@ public class ParticleHandeler : MonoBehaviour
 
     public void DestroyAndRespawn()
     {
+        transform.parent.GetComponent<BNG.Grabbable>().DropItem(true,true);
         Destroy(transform.parent.parent.gameObject, 0.0f);
         GetComponent<BekerglasInhoud>().Respawn();
     }
