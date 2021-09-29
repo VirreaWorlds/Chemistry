@@ -20762,7 +20762,7 @@ PrefabInstance:
     - target: {fileID: 7651904614030498083, guid: 580482dc5e689294baec22cb3372064d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.678
+      value: 0.617
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 580482dc5e689294baec22cb3372064d, type: 3}
@@ -26060,7 +26060,7 @@ PrefabInstance:
     - target: {fileID: -2180665742282426129, guid: 580482dc5e689294baec22cb3372064d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.636
+      value: -0.033
       objectReference: {fileID: 0}
     - target: {fileID: -2180665742282426129, guid: 580482dc5e689294baec22cb3372064d,
         type: 3}
@@ -27054,6 +27054,7 @@ MonoBehaviour:
   kraanBekerDetectorRange: 0.2
   waterNeededPerBekerScoop: 10
   kraanAudio: {fileID: 0}
+  drainSpeed: 1
 --- !u!1 &1257408715
 GameObject:
   m_ObjectHideFlags: 0
@@ -30590,9 +30591,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inhoud: 100
-  minMaxWaterHeight: {x: -0.0213, y: 0.0876}
+  minMaxWaterHeight: {x: -0.0298, y: -0.0137}
   waterPlane: {fileID: 1535564867}
-  waterAddedPerDrop: 0.4
+  waterAddedPerDrop: 5
   waterExample: {fileID: 11400000, guid: bff7f9e26c4fafa4db76b563acf44fd3, type: 2}
   kraan1: {fileID: 880863416}
   kraan2: {fileID: 474898108}
@@ -30602,9 +30603,10 @@ MonoBehaviour:
   kraanAan: 0
   forceAan: 0
   kraanBekerDetector: {fileID: 1266495279}
-  kraanBekerDetectorRange: 0.16
+  kraanBekerDetectorRange: 0.19
   waterNeededPerBekerScoop: 10
   kraanAudio: {fileID: 1714052691}
+  drainSpeed: 100
 --- !u!1 &1449875273
 GameObject:
   m_ObjectHideFlags: 0
@@ -32384,13 +32386,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535564867}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0876, z: 0}
+  m_LocalRotation: {x: 0.003926977, y: 0, z: 0, w: 0.9999923}
+  m_LocalPosition: {x: -0, y: -0.0298, z: 0}
   m_LocalScale: {x: 0.040295236, y: 0.040295236, z: 0.040295236}
   m_Children: []
   m_Father: {fileID: 1448455138}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.45, y: 0, z: 0}
 --- !u!64 &1535564869
 MeshCollider:
   m_ObjectHideFlags: 0

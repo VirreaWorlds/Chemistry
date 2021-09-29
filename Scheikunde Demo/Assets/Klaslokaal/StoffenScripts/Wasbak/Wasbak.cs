@@ -26,6 +26,7 @@ public class Wasbak : MonoBehaviour
     bool b;
 
     public AudioSource kraanAudio;
+    public float drainSpeed = 1.0f;
 
     //public bool dingOnderwater;
 
@@ -40,7 +41,7 @@ public class Wasbak : MonoBehaviour
 
         waterPlane.transform.localPosition = new Vector3(0, Mathf.Lerp(minMaxWaterHeight.x, minMaxWaterHeight.y, inhoud / 100), 0);
 
-        if(inhoud < 100.0f || b)
+        if(b)
         {
             kraanAan = true;
 
@@ -57,6 +58,11 @@ public class Wasbak : MonoBehaviour
         }
 
         if (forceAan) kraanAan = true;
+
+        if(inhoud > 0)
+        {
+            inhoud -= drainSpeed * Time.deltaTime;
+        }
         
         //kraanAan = inhoud < 100.0f;
     }
@@ -116,44 +122,44 @@ public class Wasbak : MonoBehaviour
         {
             b = Vector3.Distance(other.transform.position, kraanBekerDetector.transform.position) <= kraanBekerDetectorRange;
 
-            if (inhoud >= waterNeededPerBekerScoop)
-            {
-                var b = other.GetComponent<BekerGieter>();
-                if (b.inhoudEmitPoint.transform.position.y < waterPlane.transform.position.y)
-                {
-                    int amountOfLevelsUp = 0;
+            //if (inhoud >= waterNeededPerBekerScoop)
+            //{
+            //    var b = other.GetComponent<BekerGieter>();
+            //    if (b.inhoudEmitPoint.transform.position.y < waterPlane.transform.position.y)
+            //    {
+            //        int amountOfLevelsUp = 0;
 
-                    if (waterPlane.transform.position.y > b.lowestPoint.transform.position.y && b.bekerInhoud.Full < 1)
-                    {
-                        b.bekerInhoud.Full = 1;
-                        b.bekerInhoud.stofinformatiehouder = waterExample;
-                        amountOfLevelsUp++;
-                    }
+            //        if (waterPlane.transform.position.y > b.lowestPoint.transform.position.y && b.bekerInhoud.Full < 1)
+            //        {
+            //            b.bekerInhoud.Full = 1;
+            //            b.bekerInhoud.stofinformatiehouder = waterExample;
+            //            amountOfLevelsUp++;
+            //        }
 
-                    if (waterPlane.transform.position.y > b.midPoint.transform.position.y && b.bekerInhoud.Full < 2)
-                    {
-                        b.bekerInhoud.Full = 2;
-                        b.bekerInhoud.stofinformatiehouder = waterExample;
-                        amountOfLevelsUp++;
-                    }
+            //        if (waterPlane.transform.position.y > b.midPoint.transform.position.y && b.bekerInhoud.Full < 2)
+            //        {
+            //            b.bekerInhoud.Full = 2;
+            //            b.bekerInhoud.stofinformatiehouder = waterExample;
+            //            amountOfLevelsUp++;
+            //        }
 
-                    if (waterPlane.transform.position.y > b.highestPoint.transform.position.y && b.bekerInhoud.Full < 3)
-                    {
-                        b.bekerInhoud.Full = 3;
-                        b.bekerInhoud.stofinformatiehouder = waterExample;
-                        amountOfLevelsUp++;
-                    }
+            //        if (waterPlane.transform.position.y > b.highestPoint.transform.position.y && b.bekerInhoud.Full < 3)
+            //        {
+            //            b.bekerInhoud.Full = 3;
+            //            b.bekerInhoud.stofinformatiehouder = waterExample;
+            //            amountOfLevelsUp++;
+            //        }
 
-                    inhoud -= amountOfLevelsUp * 3;
-                }
-            }            
+            //        inhoud -= amountOfLevelsUp * 3;
+            //    }
+            //}
         }
 
-        if (other.GetComponent<BekerGieter>() != null)
-        {
-            other.GetComponent<BekerGieter>().inwater = other.GetComponent<BekerGieter>().inhoudEmitPoint.transform.position.y < waterPlane.transform.position.y;
-            //other.GetComponent<BekerGieter>().inwater = false;
-        }
+        //if (other.GetComponent<BekerGieter>() != null)
+        //{
+        //    other.GetComponent<BekerGieter>().inwater = other.GetComponent<BekerGieter>().inhoudEmitPoint.transform.position.y < waterPlane.transform.position.y;
+        //    //other.GetComponent<BekerGieter>().inwater = false;
+        //}
     }
 
     //private void OnTriggerEnter(Collider other)
@@ -164,11 +170,11 @@ public class Wasbak : MonoBehaviour
     //    }
     //}
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.GetComponent<BekerGieter>() != null)
-        {
-            other.GetComponent<BekerGieter>().inwater = false;
-        }
-    }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.GetComponent<BekerGieter>() != null)
+    //    {
+    //        other.GetComponent<BekerGieter>().inwater = false;
+    //    }
+    //}
 }
