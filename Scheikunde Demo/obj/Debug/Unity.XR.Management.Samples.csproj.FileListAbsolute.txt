@@ -1,0 +1,2 @@
+E:\VirreaJarno\Unity\Projects\Scheikunde Demo\obj\Debug\Unity.XR.Management.Samples.csprojAssemblyReference.cache
+E:\VirreaJarno\Unity\Projects\Scheikunde Demo\obj\Debug\Unity.XR.Management.Samples.csproj.CoreCompileInputs.cache
