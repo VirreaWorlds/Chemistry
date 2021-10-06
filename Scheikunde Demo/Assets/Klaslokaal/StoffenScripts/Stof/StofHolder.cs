@@ -15,7 +15,12 @@ public class StofHolder : MonoBehaviour
     GameObject g;
     public bool showInfo = true;
 
+    private Transform c;
 
+    private void Start()
+    {
+        c = GameObject.FindGameObjectWithTag("MainCamera").transform;
+    }
 
     // Start is called before the first frame update
     void Awake()
@@ -68,6 +73,7 @@ public class StofHolder : MonoBehaviour
             //g.transform.Translate(0, 0.01f, 0);
 
             g.transform.LookAt(Camera.main.transform.position);
+            //g.transform.LookAt(c.position);
             //g.transform.Rotate(0, 180, 0, Space.Self);
         }
     }

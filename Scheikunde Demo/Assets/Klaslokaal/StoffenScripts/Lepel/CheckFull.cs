@@ -8,6 +8,7 @@ public class CheckFull : MonoBehaviour
     public bool Voll;
 
     [SerializeField] private Transform dezeParent;
+    public GrabStof parentGrabStof;
 
     public GameObject inhoudPrefab;
 
@@ -20,6 +21,7 @@ public class CheckFull : MonoBehaviour
     void Start()
     {
         dezeParent = transform.parent;
+        parentGrabStof = dezeParent.GetComponent<GrabStof>();
     }
 
     // Update is called once per frame
@@ -32,7 +34,7 @@ public class CheckFull : MonoBehaviour
 
         try
         {
-            var oplepel = dezeParent.GetChild(1);
+            var oplepel = dezeParent.GetChild(2);
             Voll = true;
         }
         catch 
@@ -41,6 +43,14 @@ public class CheckFull : MonoBehaviour
         }
 
         b = animationTrigger;
+
+        if(parentGrabStof.UpsideDown())
+        {
+            if (Voll)
+            {
+                DeleteStof();
+            }
+        }
     }
 
 
@@ -54,13 +64,13 @@ public class CheckFull : MonoBehaviour
             {
                 GameObject g = Instantiate(inhoudPrefab, transform, true);
 
-                g.GetComponent<Droplet>().stof = dezeParent.GetChild(1).GetComponent<StofHolder>().stofinformatiehouder;
+                g.GetComponent<Droplet>().stof = dezeParent.GetChild(2).GetComponent<StofHolder>().stofinformatiehouder;
                 g.transform.SetParent(null);
                 g.transform.position = transform.position;
             }
 
-            Debug.Log("Destroy");
-            Destroy(dezeParent.GetChild(1).gameObject);
+            //Debug.Log("Destroy");
+            Destroy(dezeParent.GetChild(2).gameObject);
         }
 
 

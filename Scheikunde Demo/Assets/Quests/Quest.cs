@@ -20,6 +20,7 @@ public class Quest : ScriptableObject
                 {
                     ob.completed = true;
                     AudioManager.instance.objective.Play();
+                    QuestManager.instance.nSpawner.CreateNewNotification(ob);
                 }
             }
         }
@@ -67,6 +68,7 @@ public class Quest : ScriptableObject
                             ob.completed = true;
 
                             AudioManager.instance.objective.Play();
+                            QuestManager.instance.nSpawner.CreateNewNotification(ob);
                         } 
                     }
                 }
@@ -77,6 +79,7 @@ public class Quest : ScriptableObject
                     {
                         ob.completed = true;
                         AudioManager.instance.objective.Play();
+                        QuestManager.instance.nSpawner.CreateNewNotification(ob);
                     }
                 }
             }

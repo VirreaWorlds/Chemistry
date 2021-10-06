@@ -1,0 +1,24 @@
+Change the functions which play the sounds for the quests/objectives to QuestManager.instance.nSpawner.CreateNewNotification(quest/objective) + SpawnSound
+
+NotificationSpawner needs to be on the same object as the questmanager
+
+Target object needs to be placed on the centereyeanchor of the vr rig
+
+Dont forget to add the createnotification function to ALL places. I forgot the objective-specific
+
+Change the text objects which show "Objectives:" to "Taken:" as it needs to be dutch.
+
+
+Add this in CheckFull.cs on the bottom of the Update():
+//
+
+        if(dezeParent.transform.position.y > transform.position.y)
+        {
+            if (Voll)
+            {
+                DeleteStof();
+            }
+        }
+
+//
+

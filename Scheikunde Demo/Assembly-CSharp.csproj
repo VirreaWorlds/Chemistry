@@ -205,11 +205,14 @@
     <Compile Include="Assets\BNG Framework\Scripts\Components\Damageable.cs" />
     <Compile Include="Assets\BNG Framework\Scripts\Helpers\ScaleMaterialHelper.cs" />
     <Compile Include="Assets\BNG Framework\Scripts\Extras\ProjectileLauncher.cs" />
+    <Compile Include="Assets\Quests\NotificationS\NotificationSpawner.cs" />
+    <Compile Include="Assets\Quests\NotificationS\Notification.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\BNG Framework\Integrations\PUN\Readme.txt" />
      <None Include="Assets\MeasuredMaterialLibraryURP-master\Assets\Measured Materials Library\ClearCoat\Shaders\LitInput.hlsl" />
      <None Include="Assets\BNG Framework\Materials\ColumnGlowShaderLicense.txt" />
+     <None Include="Assets\Quests\NotificationS\ImportantInfo.txt" />
      <None Include="Assets\Shaders\flame\URPflameShader.shader" />
      <None Include="Assets\Shaders\Beker\FluidPlane.shader" />
      <None Include="Assets\BNG Framework\Textures\particleTextures.txt" />

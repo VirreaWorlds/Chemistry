@@ -30,7 +30,7 @@ TagManager:
   - Extinguisher
   - Tutorial
   - Lepel
-  - 
+  - Overlay
   - 
   - 
   - 
@@ -44,4 +44,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Top
+    uniqueID: 2668402743
     locked: 0

@@ -138,7 +138,7 @@ public class BekerglasInhoud : MonoBehaviour
                 {
                     var othersubstance = other.GetComponent<StofHolder>().stofinformatiehouder;
                     var thissubstance = stofinformatiehouder;
-                    var vloeistof = other.GetComponent<StofHolder>().stofinformatiehouder.Vloeistof;
+                    var vloeistof = othersubstance.Vloeistof;
                     otherGameObject = other.gameObject;
 
                     if (vloeistof == true)

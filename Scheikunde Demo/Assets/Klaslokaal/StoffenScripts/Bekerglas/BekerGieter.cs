@@ -24,7 +24,23 @@ public class BekerGieter : MonoBehaviour
 
     public bool inwater;
 
-    private void Update() {
+    [Space]
+
+    public bool activeGieter;
+    public float activeTimer;
+    public bool b; //isTrueWhenInHand
+    private float t; //countDownBeforeDeactivate
+
+    private void Update()
+    {
+        if (Timer(b))
+        {
+            Gieter();
+        }
+    }
+
+    public void Gieter()
+    {
         currentLowest = GetLowestPoint(mainPoints);
 
         if (!inwater && bekerInhoud.stofinformatiehouder != null)
@@ -42,6 +58,21 @@ public class BekerGieter : MonoBehaviour
                 LowerLevel();
             }
         }
+    }
+
+    public bool Timer(bool isHolding)
+    {
+        if (isHolding)
+        {
+            t = 0;
+        }
+        else
+        {
+            t += Time.deltaTime;
+        }
+
+        activeGieter = t < activeTimer;
+        return t < activeTimer;
     }
 
     public void OnLevelGet(float l)
@@ -140,5 +171,15 @@ public class BekerGieter : MonoBehaviour
         }
 
         return highest;
+    }
+
+    public void Hold()
+    {
+        b = true;
+    }
+
+    public void Holdnt()
+    {
+        b = false;
     }
 }

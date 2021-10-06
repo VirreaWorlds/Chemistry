@@ -12,6 +12,7 @@ public class QuestManager : MonoBehaviour
     public List<GameObject> visualQuests;
     public GameObject visualQuestPrefab;
     public Transform visualQuestsTransform;
+    public NotificationSpawner nSpawner;
 
     public void SendObjectiveInputToQuests(Objectives objectiveInput) //Send the new objective information to all Quests and checks whether they are completed or not.
     {
@@ -24,6 +25,7 @@ public class QuestManager : MonoBehaviour
                 completedQuests.Add(quest);
                 //quests.Remove(quest);
                 AudioManager.instance.quest.Play();
+                QuestManager.instance.nSpawner.CreateNewNotification(quest);
             }
         }
 
@@ -47,6 +49,7 @@ public class QuestManager : MonoBehaviour
                 completedQuests.Add(quest);
                 //quests.Remove(quest);
                 AudioManager.instance.quest.Play();
+                QuestManager.instance.nSpawner.CreateNewNotification(quest);
             }
         }
 
