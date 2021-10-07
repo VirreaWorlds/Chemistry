@@ -11346,6 +11346,9 @@ MonoBehaviour:
   fluidPlaneVisible: 1
   level: 0
   inwater: 0
+  activeGieter: 0
+  activeTimer: 10
+  b: 0
 --- !u!114 &2371208334463233240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11372,8 +11375,7 @@ MonoBehaviour:
   luminolSolution: {fileID: 11400000, guid: 3626207fbe27ae9449607cc74f20332e, type: 2}
   luminolLight: {fileID: 3990053214977131314}
   respawnOnDestruction: 1
-  respawnPrefab: {fileID: -2733287866730182709, guid: f394ea240d613e34eab5c873b9fdf3f9,
-    type: 3}
+  respawnPrefab: {fileID: 7558096126859416523}
   respawnAnchor: {fileID: 0}
   respawnPos: {x: 0, y: 0, z: 0}
   acceptingInput: 0
@@ -22656,7 +22658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6002754350248357103}
   m_Layer: 15
-  m_Name: bekerglas Variant Variant (6)
+  m_Name: Beker Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

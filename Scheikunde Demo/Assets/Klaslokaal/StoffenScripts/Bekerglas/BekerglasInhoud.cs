@@ -305,22 +305,23 @@ public class BekerglasInhoud : MonoBehaviour
             {
                 if (Full != 0)
                 {
-                    luminolLight.intensity = targetLevel / 10;
+                    luminolLight.intensity = targetLevel / 5;
 
-                    if (!luminolLight.enabled)
-                    {
-                        luminolLight.enabled = true;
-                    }
+                    //if (!luminolLight.enabled)
+                    //{
+                    //    luminolLight.enabled = true;
+                    //}
                 }
                 else
                 {
                     luminolLight.intensity = 0;
-                    luminolLight.enabled = false;
+                    //luminolLight.enabled = false;
                 }
             }
             else
             {
-                luminolLight.enabled = false;
+                //luminolLight.enabled = false;
+                luminolLight.intensity = 0;
             }
         }
 

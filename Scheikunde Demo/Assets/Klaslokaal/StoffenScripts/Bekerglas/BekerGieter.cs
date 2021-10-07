@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,6 +31,13 @@ public class BekerGieter : MonoBehaviour
     public float activeTimer;
     public bool b; //isTrueWhenInHand
     private float t; //countDownBeforeDeactivate
+    private float tt = 50;
+
+    private void Start()
+    {
+        t = activeTimer;
+        tt = Time.time;
+    }
 
     private void Update()
     {
@@ -64,15 +72,17 @@ public class BekerGieter : MonoBehaviour
     {
         if (isHolding)
         {
-            t = 0;
+            t = activeTimer;
+            tt = Time.time;
+            return true;
         }
         else
         {
-            t += Time.deltaTime;
+            t = Time.time - tt;
         }
 
-        activeGieter = t < activeTimer;
-        return t < activeTimer;
+        activeGieter = t < activeTimer; // true as long as the time limit hasn't been reached yet
+        return t < activeTimer; //if true you can spill stuff
     }
 
     public void OnLevelGet(float l)

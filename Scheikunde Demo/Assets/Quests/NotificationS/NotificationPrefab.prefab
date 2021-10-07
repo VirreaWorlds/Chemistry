@@ -218,7 +218,7 @@ MonoBehaviour:
   isFirstInQueue: 0
   isQuest: 0
   target: {fileID: 0}
-  speed: 2
+  speed: 0.6
   anim: {fileID: 125396239728726862}
   notificationText: {fileID: 125396239303037453}
   notificationType: {fileID: 125396239847375744}
