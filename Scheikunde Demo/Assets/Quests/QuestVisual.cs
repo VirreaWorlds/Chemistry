@@ -20,9 +20,17 @@ public class QuestVisual : MonoBehaviour
 
     bool lastFrame;
 
+    public bool isSelected;
+    public GameObject selectedOutline;
+
     private void Update()
     {
         UpdateQuest();
+
+        if(selectedOutline != null)
+        {
+            selectedOutline.SetActive(isSelected);
+        }
     }
 
     public void UpdateQuest()
